@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 
+
 const App = () => {
   const sayHello = () => console.log("Hello");
-
+ 
   const [number, setNumber] = useState(0);
   const [aNumber, setAnumber] = useState(0);
-  useEffect(sayHello, []);
+  useEffect(sayHello, [number]);
   return (
     <div className="APP">
       <div>hi</div>
@@ -15,4 +16,6 @@ const App = () => {
     </div>
   );
 };
-export default App;
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
