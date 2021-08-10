@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 
-const useClick = (onClick) => {
+const useClick = onClick => {
   const element = useRef();
   useEffect(() => {
     if (element.current) {
@@ -27,5 +27,5 @@ const App = () => {
   );
 };
 
-
-export default App;
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);

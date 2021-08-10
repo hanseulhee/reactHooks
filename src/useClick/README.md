@@ -1,3 +1,14 @@
+# useClick
+
+
+### useRef
+reference란 component의 어떠한 부분을 선택할 수 있는 방법이다. (= document.getElementById())
+React의 모든 component는 reference element를 가지고 있다.
+
+
+### useClick
+
+```js
 import React, { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 
@@ -15,6 +26,7 @@ const useClick = (onClick) => {
   }, []);
   return element;
 };
+
 const App = () => {
   const sayHello = () => console.log("say hello");
   const title = useClick(sayHello);
@@ -26,6 +38,5 @@ const App = () => {
     </div>
   );
 };
-
-
-export default App;
+```
+useClick으로 click에 따라서 console창에 문구를 다르게 넣는 것을 만들었다.
